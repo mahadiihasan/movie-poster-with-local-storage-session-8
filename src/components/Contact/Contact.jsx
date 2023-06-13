@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRef } from 'react';
 import emailjs, { send } from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
 // import { useForm } from "react-hook-form";
 
 const Contact = () => {
@@ -25,8 +26,13 @@ const Contact = () => {
         setFormName("");
         setFormEmail("");
         setFormMessage("");
+        handleToast();
 
     };
+
+    const handleToast =()=>{
+        toast("Thanks for feedback..!")
+    }
 
     // const handleSubmitAndReset = () => {      
 
@@ -67,6 +73,9 @@ const Contact = () => {
                     <div>
                         <button className='btn btn-primary mx-auto' type='submit'>Send</button>
                     </div>
+                    {/* <div>
+                        <button onClick={handleToast} className='btn btn-primary mx-auto'>Toast</button>
+                    </div> */}
 
                 </form>
 
