@@ -47,7 +47,7 @@ function App() {
           </div>
         </div>
       </div>
-      {/* <div><Contact></Contact></div> */}
+      <div className='container'><Contact></Contact></div>
       <ToastContainer></ToastContainer>
     </>
   )
