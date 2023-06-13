@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useRef } from 'react';
 import emailjs, { send } from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
@@ -59,16 +59,16 @@ const Contact = () => {
                     <h4 className='mt-4'>Username</h4>
 
                     {/* onChange={(e) => setName(e.target.value)} */}
-                    <input className='py-3 w-75' type="text" name='form_name' value={form_name} onChange={(e) => setFormName(e.target.value)} placeholder="Enter your username" />
+                    <input className='py-3 w-75' type="text" name='form_name' value={form_name} onChange={(e) => setFormName(e.target.value)} placeholder="Enter your username" required />
 
 
                     <h4 className='mt-4'>Email</h4>
-                    <input className='py-3 w-75' type="text" name='form_email' value={form_email} onChange={(e) => setFormEmail(e.target.value)} placeholder="Enter your Email" />
+                    <input className='py-3 w-75' type="text" name='form_email' value={form_email} onChange={(e) => setFormEmail(e.target.value)} placeholder="Enter your Email" required/>
 
 
 
                     <h4 className='mt-4'>Write any suggestion here</h4>
-                    <textarea className='w-75' name='form_message' value={form_message} onChange={(e) => setFormMessage(e.target.value)} rows="5"></textarea>
+                    <textarea className='w-75' name='form_message' value={form_message} onChange={(e) => setFormMessage(e.target.value)} rows="5" required></textarea>
 
                     <div>
                         <button className='btn btn-primary mx-auto' type='submit'>Send</button>
