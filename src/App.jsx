@@ -7,6 +7,8 @@ import Header from './components/Header/Header'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Contact from './components/Contact/Contact'
 import SideCart from './components/SideCart/SideCart'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -46,6 +48,7 @@ function App() {
         </div>
       </div>
       {/* <div><Contact></Contact></div> */}
+      <ToastContainer></ToastContainer>
     </>
   )
 }

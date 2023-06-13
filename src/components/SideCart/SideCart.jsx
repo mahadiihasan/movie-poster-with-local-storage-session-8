@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+// import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 const SideCart = ({ watchTime }) => {
 
@@ -23,6 +25,10 @@ const SideCart = ({ watchTime }) => {
         }
     },[watchTime])
 
+    const handleToast =()=>{
+        toast("Weee! So easy.....!")
+    }
+
     return (
         // <div className='border border-success'>
         //     <img src="/image/email.png" className='img-fluid' alt="" />
@@ -38,7 +44,7 @@ const SideCart = ({ watchTime }) => {
             <button onClick={()=>handlebreatTime(20)} className='w-25 btn-circle m-1 bg-warning btn btn-info'>20</button>
             <button onClick={()=>handlebreatTime(25)} className='w-25 btn-circle m-1 bg-danger btn btn-info'>25</button>
             <input className='m-3' type="text" value={breakTime} disabled />
-            <button onClick={()=>handlebreatTime(25)} className='w-75 btn-circle m-3 bg-success btn btn-info'>Complete</button>
+            <button onClick={handleToast} className='w-75 btn-circle m-3 bg-success btn btn-info'>Complete</button>
 
         </div>
     );
